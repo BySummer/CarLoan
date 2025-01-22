@@ -16,7 +16,7 @@ class Input
     #[Assert\Type(type: 'numeric', groups: ['g1'])]
     #[Assert\NotNull(groups: ['g2'])]
     #[Assert\Positive(groups: ['g2'])]
-    #[Assert\Range(min: 0, max: 999999999.99, groups: ['g3'])]
+    #[Assert\Range(max: 999999999.99, groups: ['g3'])]
     #[Assert\Regex(
         pattern: '/^\d+(\.\d{1,2})?$/',
         message: 'initialPayment должен быть числом с плавающей точкой',
