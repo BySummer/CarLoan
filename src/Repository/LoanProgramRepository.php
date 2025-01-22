@@ -23,6 +23,7 @@ class LoanProgramRepository extends ServiceEntityRepository
                     ->andWhere('lp.maxLoanTerm >= :loanTerm')
                     ->setParameter('initialPayment', $initialPayment)
                     ->setParameter('loanTerm', $loanTerm)
+                    ->orderBy('lp.interestRate', 'DESC')
                     ->setMaxResults(1)
                     ->getQuery()
                     ->getOneOrNullResult();
