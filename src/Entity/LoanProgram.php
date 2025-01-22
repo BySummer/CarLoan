@@ -18,10 +18,10 @@ class LoanProgram
     private ?string $name = null;
 
     #[ORM\Column(type: Types::DECIMAL, precision: 5, scale: 2)]
-    private ?string $interestRate = null;
+    private ?float $interestRate = null;
 
     #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 2)]
-    private ?string $minInitialPayment = null;
+    private ?float $minInitialPayment = null;
 
     #[ORM\Column(type: Types::SMALLINT)]
     private ?int $maxLoanTerm = null;
@@ -43,24 +43,24 @@ class LoanProgram
         return $this;
     }
 
-    public function getInterestRate(): ?string
+    public function getInterestRate(): ?float
     {
         return $this->interestRate;
     }
 
-    public function setInterestRate(string $interestRate): static
+    public function setInterestRate(float $interestRate): static
     {
         $this->interestRate = $interestRate;
 
         return $this;
     }
 
-    public function getMinInitialPayment(): ?string
+    public function getMinInitialPayment(): ?float
     {
         return $this->minInitialPayment;
     }
 
-    public function setMinInitialPayment(string $minInitialPayment): static
+    public function setMinInitialPayment(float $minInitialPayment): static
     {
         $this->minInitialPayment = $minInitialPayment;
 
