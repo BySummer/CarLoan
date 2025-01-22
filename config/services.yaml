@@ -4,6 +4,7 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
+    car_images_relative_path: 'files/images/car'
 
 services:
     # default configuration for services in *this* file
@@ -28,3 +29,8 @@ services:
         resource: '../src/Controller/'
         tags: [ 'controller.service_arguments' ]
         exclude: '../src/UI/Controller/**/{Dto}/*.php'
+
+    App\Application\Car\CarPhotoUrlBuilder:
+        arguments:
+            $baseHost: '%env(BASE_HOST)%'
+            $imageUrlPath: '%car_images_relative_path%'
