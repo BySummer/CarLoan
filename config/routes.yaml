@@ -1,5 +1,3 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+calculate_credit:
+    path: /api/v1/credit/calculate
+    controller: App\Controller\Api\CreditCalculate\Controller
