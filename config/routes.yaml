@@ -9,3 +9,7 @@ car_show:
 car_show_one:
     path: /api/v1/cars/{id}
     controller: App\Controller\Api\Car\ShowOne\Controller
+
+request:
+    path: /api/v1/request
+    controller: App\Controller\Api\Request\Controller
