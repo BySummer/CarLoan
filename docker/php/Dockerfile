@@ -10,6 +10,7 @@ RUN apk add --no-cache \
     icu-dev \
     git \
     shadow \
+    && docker-php-ext-install pdo pdo_mysql \
     && usermod -u ${USER_ID} www-data \
     && groupmod -g ${GROUP_ID} www-data
 
