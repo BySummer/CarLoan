@@ -8,10 +8,10 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[Assert\GroupSequence(['Input', 'g1', 'g2', 'g3'])]
 class Input
 {
-    #[Assert\Type(type: 'integer', groups: ['g1'])]
+    #[Assert\Type(type: 'numeric', groups: ['g1'])]
     #[Assert\NotNull(groups: ['g2'])]
     #[Assert\Positive(groups: ['g2'])]
-    private ?int $price;
+    private ?string $price;
 
     #[Assert\Type(type: 'numeric', groups: ['g1'])]
     #[Assert\NotNull(groups: ['g2'])]
@@ -22,12 +22,12 @@ class Input
         message: 'initialPayment должен быть числом с плавающей точкой',
         groups: ['g3']
     )]
-    private ?float $initialPayment;
+    private ?string $initialPayment;
 
-    #[Assert\Type(type: 'integer', groups: ['g1'])]
+    #[Assert\Type(type: 'numeric', groups: ['g1'])]
     #[Assert\NotNull(groups: ['g2'])]
     #[Assert\Positive(groups: ['g2'])]
-    private ?int $loanTerm;
+    private ?string $loanTerm;
 
     public function __construct(Request $request)
     {
