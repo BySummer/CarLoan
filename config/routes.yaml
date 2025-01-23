@@ -1,3 +1,11 @@
 calculate_credit:
     path: /api/v1/credit/calculate
     controller: App\Controller\Api\CreditCalculate\Controller
+
+car_show:
+    path: /api/v1/cars
+    controller: App\Controller\Api\Car\Show\Controller
+
+car_show_one:
+    path: /api/v1/cars/{id}
+    controller: App\Controller\Api\Car\ShowOne\Controller
