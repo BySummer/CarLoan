@@ -1,5 +1,3 @@
-version: '3.7'
-
 services:
     car_loan_nginx:
         image: nginx:1.17.9-alpine
